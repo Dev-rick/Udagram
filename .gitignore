@@ -1,2 +1,3 @@
 deployment/k8s/aws-secret.yaml
 deployment/k8s/env-secret.yaml
+deployment/k8s/env-configmap.yaml

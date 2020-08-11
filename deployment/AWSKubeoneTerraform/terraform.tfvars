@@ -1,4 +1,4 @@
-cluster_name = "demo"
+cluster_name = "udagram-app"
 
 aws_region = "eu-west-3"
 
