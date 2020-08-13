@@ -61,4 +61,10 @@ set-up infrastracture:
   - export KUBECONFIG=~/UdacityCloudCourse/Udagram-app/deployment/AWSKubeoneTerraform/udagram-app-kubeconfig
   - source ~/.bash_profile
 
+kill infrastracture:
+  - eval $(ssh-agent -s)
+  - ssh-add ~/.ssh/id_rsa
+  - cd deployment/AWSKubeoneTerraform
+  - kubeone reset --manifest config.yaml --tfjson .
+  - terraform destroy
 
