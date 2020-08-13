@@ -8,9 +8,7 @@ A basic Ionic client web application which consumes the RestAPI Backend.
 2. [The RestAPI Feed Backend](/restapi-feed), a Node-Express feed microservice.
 3. [The RestAPI User Backend](/restapi-user), a Node-Express user microservice.
 
-## Version 2: Locally usable with docker-compose
-
-> _tip_: Not deployed to kubernetes yet, but already initialized the right environment variables
+## Version 3: Usable in Kubernetes Cluster on AWS
 
 > _tip_: Pain points in the first place: define the right environment variables for restapi-feed as docker-compose does not access the credentials from /.aws even if mounted:
 

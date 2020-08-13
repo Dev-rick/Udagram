@@ -44,7 +44,8 @@ install:
   - # WAIT 5 minutes
   - kubectl rollout restart deployment/frontend
   - kubectl rollout restart deployment/backend-feed
-  - kubectl rollout restart deployment/backend-user    
+  - kubectl rollout restart deployment/backend-user
+  - kubectl rollout restart deployment/reverseproxy
   - kubectl port-forward --address localhost,192.168.0.80 service/frontend 8000:8100
   - kubectl port-forward --address localhost,192.168.0.80 service/reverseproxy 8080:8080
   
