@@ -8,7 +8,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: '',
     loadChildren: './home/home.module#HomePageModule'
   }
 ];

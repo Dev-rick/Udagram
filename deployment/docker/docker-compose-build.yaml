@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: .
-    image: dev-rick/reverseproxy 
+    image: devrick1/reverseproxy 
   backend_user:
     build:
-      context: ../../restapi-user
-    image: dev-rick/restapi-user
+      context: ../../app/restapi-user
+    image: devrick1/restapi-user
   backend_feed:
     build:
-      context: ../../restapi-feed  
-    image: dev-rick/restapi-feed
+      context: ../../app/restapi-feed  
+    image: devrick1/restapi-feed
   frontend:
     build:
-      context: ../../frontend  
-    image: dev-rick/frontend:local
+      context: ../../app/frontend  
+    image: devrick1/frontend:local

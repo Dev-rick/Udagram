@@ -1,0 +1,346 @@
+{
+  "kubeone_api": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "endpoint": "string"
+      }
+    ],
+    "value": {
+      "endpoint": "udagram-app-api-lb-1666644130.eu-west-3.elb.amazonaws.com"
+    }
+  },
+  "kubeone_hosts": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "control_plane": [
+          "object",
+          {
+            "bastion": "string",
+            "bastion_port": "number",
+            "bastion_user": "string",
+            "cloud_provider": "string",
+            "cluster_name": "string",
+            "hostnames": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "private_address": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "ssh_agent_socket": "string",
+            "ssh_port": "number",
+            "ssh_private_key_file": "string",
+            "ssh_user": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "control_plane": {
+        "bastion": "35.180.158.228",
+        "bastion_port": 22,
+        "bastion_user": "ubuntu",
+        "cloud_provider": "aws",
+        "cluster_name": "udagram-app",
+        "hostnames": [
+          "ip-172-31-48-9.eu-west-3.compute.internal",
+          "ip-172-31-49-165.eu-west-3.compute.internal",
+          "ip-172-31-50-242.eu-west-3.compute.internal"
+        ],
+        "private_address": [
+          "172.31.48.9",
+          "172.31.49.165",
+          "172.31.50.242"
+        ],
+        "ssh_agent_socket": "env:SSH_AUTH_SOCK",
+        "ssh_port": 22,
+        "ssh_private_key_file": "",
+        "ssh_user": "ubuntu"
+      }
+    }
+  },
+  "kubeone_workers": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "udagram-app-eu-west-3a": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "assignPublicIP": "bool",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "ebsVolumeEncrypted": "bool",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "isSpotInstance": "bool",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "udagram-app-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "udagram-app-eu-west-3b": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "assignPublicIP": "bool",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "ebsVolumeEncrypted": "bool",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "isSpotInstance": "bool",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "udagram-app-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "udagram-app-eu-west-3c": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "assignPublicIP": "bool",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "ebsVolumeEncrypted": "bool",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "isSpotInstance": "bool",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "udagram-app-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "udagram-app-eu-west-3a": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00f6fb16625871821",
+            "assignPublicIP": true,
+            "availabilityZone": "eu-west-3a",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "ebsVolumeEncrypted": false,
+            "instanceProfile": "udagram-app-host",
+            "instanceType": "t3.medium",
+            "isSpotInstance": false,
+            "region": "eu-west-3",
+            "securityGroupIDs": [
+              "sg-007e7a7b6316b2a65"
+            ],
+            "subnetId": "subnet-0110b0be752c69e30",
+            "tags": {
+              "udagram-app-workers": ""
+            },
+            "vpcId": "vpc-ce1228a7"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKH6ACI8+HUjgw/VK6aFVExzI0frr9L4mX5ipE4N4ORuvIkO9/AoE/qR5XOia56W9R0qqx9tUdlGxHOllw8xjUHjcZ03jxdJujdikYevuGbkOtr2wutL4h2zWTTUUQ8CDgGiKlPuke+ZA02HNWNU6CjMlen96hvlJav1ySo4CVTGUVOXy5/n0KmADn8FYAPxQ0FlTzHEfPUVBreWzV9bCuKgCd2MkwPRzXTSiglU95T6dh6XG1EC/DIW4tT4Wbzo9leKhEC7Frfej03MMBDcRLUff6Q/V6KTeQ2ZCtWNciJQDs9PiI4WHmijryugDS6vivkPLfLUkdTKgnZ7oNScd3y0lTy8Juoyt5DxUzDjJI6ashq+eoxLL5SgdqOvycdX3mZ4TVeU2ysCD+b3WxSuW403XnBtLVflSGvk2IT2Eppb+tycgxARfPSOobllbhxc5hmX21s6MmYLfl8/fORfHjkJcFssA1WggmqjcblcwtWVoVxWwef2WaSy65UPQldEJgEBPzIzjIx3hB1r2i8rwKbNRRkqR2jyB/YkHvi+te4Nosgcy3eHTV8Gz40wiHrchuBvaC0MBKhBSXMakmvJ8hELxVOWeGEHaN4YklYKNBIqAJUAtl7J0DdFbTfCxEYew/2VlUAfUmi1n5g35EnFp+xywi1cuIM/qAqjK0qCgIHQ== rickwarling@gmail.com"
+          ]
+        },
+        "replicas": 1
+      },
+      "udagram-app-eu-west-3b": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00f6fb16625871821",
+            "assignPublicIP": true,
+            "availabilityZone": "eu-west-3b",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "ebsVolumeEncrypted": false,
+            "instanceProfile": "udagram-app-host",
+            "instanceType": "t3.medium",
+            "isSpotInstance": false,
+            "region": "eu-west-3",
+            "securityGroupIDs": [
+              "sg-007e7a7b6316b2a65"
+            ],
+            "subnetId": "subnet-0765caca07e574b3a",
+            "tags": {
+              "udagram-app-workers": ""
+            },
+            "vpcId": "vpc-ce1228a7"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKH6ACI8+HUjgw/VK6aFVExzI0frr9L4mX5ipE4N4ORuvIkO9/AoE/qR5XOia56W9R0qqx9tUdlGxHOllw8xjUHjcZ03jxdJujdikYevuGbkOtr2wutL4h2zWTTUUQ8CDgGiKlPuke+ZA02HNWNU6CjMlen96hvlJav1ySo4CVTGUVOXy5/n0KmADn8FYAPxQ0FlTzHEfPUVBreWzV9bCuKgCd2MkwPRzXTSiglU95T6dh6XG1EC/DIW4tT4Wbzo9leKhEC7Frfej03MMBDcRLUff6Q/V6KTeQ2ZCtWNciJQDs9PiI4WHmijryugDS6vivkPLfLUkdTKgnZ7oNScd3y0lTy8Juoyt5DxUzDjJI6ashq+eoxLL5SgdqOvycdX3mZ4TVeU2ysCD+b3WxSuW403XnBtLVflSGvk2IT2Eppb+tycgxARfPSOobllbhxc5hmX21s6MmYLfl8/fORfHjkJcFssA1WggmqjcblcwtWVoVxWwef2WaSy65UPQldEJgEBPzIzjIx3hB1r2i8rwKbNRRkqR2jyB/YkHvi+te4Nosgcy3eHTV8Gz40wiHrchuBvaC0MBKhBSXMakmvJ8hELxVOWeGEHaN4YklYKNBIqAJUAtl7J0DdFbTfCxEYew/2VlUAfUmi1n5g35EnFp+xywi1cuIM/qAqjK0qCgIHQ== rickwarling@gmail.com"
+          ]
+        },
+        "replicas": 1
+      },
+      "udagram-app-eu-west-3c": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00f6fb16625871821",
+            "assignPublicIP": true,
+            "availabilityZone": "eu-west-3c",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "ebsVolumeEncrypted": false,
+            "instanceProfile": "udagram-app-host",
+            "instanceType": "t3.medium",
+            "isSpotInstance": false,
+            "region": "eu-west-3",
+            "securityGroupIDs": [
+              "sg-007e7a7b6316b2a65"
+            ],
+            "subnetId": "subnet-059cf5579ffa65db5",
+            "tags": {
+              "udagram-app-workers": ""
+            },
+            "vpcId": "vpc-ce1228a7"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDKH6ACI8+HUjgw/VK6aFVExzI0frr9L4mX5ipE4N4ORuvIkO9/AoE/qR5XOia56W9R0qqx9tUdlGxHOllw8xjUHjcZ03jxdJujdikYevuGbkOtr2wutL4h2zWTTUUQ8CDgGiKlPuke+ZA02HNWNU6CjMlen96hvlJav1ySo4CVTGUVOXy5/n0KmADn8FYAPxQ0FlTzHEfPUVBreWzV9bCuKgCd2MkwPRzXTSiglU95T6dh6XG1EC/DIW4tT4Wbzo9leKhEC7Frfej03MMBDcRLUff6Q/V6KTeQ2ZCtWNciJQDs9PiI4WHmijryugDS6vivkPLfLUkdTKgnZ7oNScd3y0lTy8Juoyt5DxUzDjJI6ashq+eoxLL5SgdqOvycdX3mZ4TVeU2ysCD+b3WxSuW403XnBtLVflSGvk2IT2Eppb+tycgxARfPSOobllbhxc5hmX21s6MmYLfl8/fORfHjkJcFssA1WggmqjcblcwtWVoVxWwef2WaSy65UPQldEJgEBPzIzjIx3hB1r2i8rwKbNRRkqR2jyB/YkHvi+te4Nosgcy3eHTV8Gz40wiHrchuBvaC0MBKhBSXMakmvJ8hELxVOWeGEHaN4YklYKNBIqAJUAtl7J0DdFbTfCxEYew/2VlUAfUmi1n5g35EnFp+xywi1cuIM/qAqjK0qCgIHQ== rickwarling@gmail.com"
+          ]
+        },
+        "replicas": 1
+      }
+    }
+  }
+}

@@ -15,8 +15,49 @@ before_install:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
-install:
-  - docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel 
+run containers locally:
+  # added a .dockerignore file in each context directory to ignore node_modules
+  # Used as URL http://localhost:8080 might need to chnage that to http://192.168.0.80:8080
+  # Make sure your environment
+  # deletes all containers
+  - sudo docker system prune -a #or $ docker builder prune(for only deletion of the cache)
+  - sudo docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel
+  # If not working use the normal sudo docker push (see below)
+  - sudo docker-compose -f deployment/docker/docker-compose-build.yaml push
+  - cd deployment/docker
+  - sudo docker-compose up
+  # visit http://192.168.0.80:8100
 
+install:
+  - sudo docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel
+  - sudo docker push devrick1/reverseproxy
+  - kubectl apply -f deployment/k8s
+  - kubectl get services
+  - # COPY the CLUSTER-IP:8080 of the reverse-proxy to the URL .env of deployment/docker + the environment vriable of the frontend + env-configmap.yaml in deployment/k8s
+  - sudo docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel
+  - sudo docker-compose -f deployment/docker/docker-compose-build.yaml push
+  - sudo docker push devrick1/frontend 
+  - sudo docker push devrick1/restapi-user
+  - sudo docker push devrick1/restapi-feed
+  - sudo docker push devrick1/reverseproxy
+  - kubectl apply -f deployment/k8s
+  - # WAIT 5 minutes
+  - kubectl rollout restart deployment/frontend
+  - kubectl rollout restart deployment/backend-feed
+  - kubectl rollout restart deployment/backend-user    
+  - kubectl port-forward --address localhost,192.168.0.80 service/frontend 8000:8100
+  - kubectl port-forward --address localhost,192.168.0.80 service/reverseproxy 8080:8080
+  
+set-up infrastracture:
+  - cd deployment/AWSKubeoneTerraform
+  - terraform init
+  - terraform plan
+  - terraform apply
+  - terraform output -json > tf.json
+  - eval $(ssh-agent -s)
+  - ssh-add ~/.ssh/id_rsa
+  - kubeone install --manifest config.yaml --tfjson tf.json .
+  - export KUBECONFIG=~/UdacityCloudCourse/Udagram-app/deployment/AWSKubeoneTerraform/udagram-app-kubeconfig
+  - source ~/.bash_profile
 
 
