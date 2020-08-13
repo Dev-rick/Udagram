@@ -8,7 +8,7 @@
       }
     ],
     "value": {
-      "endpoint": "udagram-app-api-lb-1666644130.eu-west-3.elb.amazonaws.com"
+      "endpoint": "udagram-app-api-lb-1625552630.eu-west-3.elb.amazonaws.com"
     }
   },
   "kubeone_hosts": {
@@ -50,20 +50,20 @@
     ],
     "value": {
       "control_plane": {
-        "bastion": "35.180.158.228",
+        "bastion": "15.237.36.211",
         "bastion_port": 22,
         "bastion_user": "ubuntu",
         "cloud_provider": "aws",
         "cluster_name": "udagram-app",
         "hostnames": [
-          "ip-172-31-48-9.eu-west-3.compute.internal",
-          "ip-172-31-49-165.eu-west-3.compute.internal",
-          "ip-172-31-50-242.eu-west-3.compute.internal"
+          "ip-172-31-240-241.eu-west-3.compute.internal",
+          "ip-172-31-241-101.eu-west-3.compute.internal",
+          "ip-172-31-242-62.eu-west-3.compute.internal"
         ],
         "private_address": [
-          "172.31.48.9",
-          "172.31.49.165",
-          "172.31.50.242"
+          "172.31.240.241",
+          "172.31.241.101",
+          "172.31.242.62"
         ],
         "ssh_agent_socket": "env:SSH_AUTH_SOCK",
         "ssh_port": 22,
@@ -257,9 +257,9 @@
             "isSpotInstance": false,
             "region": "eu-west-3",
             "securityGroupIDs": [
-              "sg-007e7a7b6316b2a65"
+              "sg-03c2c3018ccbdd9fd"
             ],
-            "subnetId": "subnet-0110b0be752c69e30",
+            "subnetId": "subnet-06c55e5c6021bbbd2",
             "tags": {
               "udagram-app-workers": ""
             },
@@ -290,9 +290,9 @@
             "isSpotInstance": false,
             "region": "eu-west-3",
             "securityGroupIDs": [
-              "sg-007e7a7b6316b2a65"
+              "sg-03c2c3018ccbdd9fd"
             ],
-            "subnetId": "subnet-0765caca07e574b3a",
+            "subnetId": "subnet-00aca057588283693",
             "tags": {
               "udagram-app-workers": ""
             },
@@ -323,9 +323,9 @@
             "isSpotInstance": false,
             "region": "eu-west-3",
             "securityGroupIDs": [
-              "sg-007e7a7b6316b2a65"
+              "sg-03c2c3018ccbdd9fd"
             ],
-            "subnetId": "subnet-059cf5579ffa65db5",
+            "subnetId": "subnet-0c6a8d356dd93bb02",
             "tags": {
               "udagram-app-workers": ""
             },

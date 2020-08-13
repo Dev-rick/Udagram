@@ -4,6 +4,7 @@
 
 # ignore all *.class files in all folders, including build root
 **/*.class
+node_modules/
 
 # ignore all markdown files (md) beside all README*.md other than README-secret.md
 *.md
